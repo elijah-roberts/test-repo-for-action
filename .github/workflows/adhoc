@@ -1,0 +1,16 @@
+name: adhoc
+on:
+  workflow_dispatch:
+    inputs:
+      sample:
+        description: 'sample input'
+        required: true
+      dry-run:
+        description: 'dry-runcod (true or false)'
+        required: false
+        default: false
+jobs:
+  tweet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: elijah-roberts/go-action@main
